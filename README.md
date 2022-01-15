@@ -16,6 +16,8 @@ Frontend в [соседнем репозитории](https://github.com/Trosh-A
 - Для хранения даты использован тип данных string. Если применить DateOnly или DateTime, то некорректно работает фильтр по этому полю;
 - Применён EF Core In-Memory Database Provider.
 ## Как запустить
+- Скачать зависимости из Nuget dotnet restore
 - Собрать и запустить backend с помощью dotnet-cli или в Visual Studio.
 - В проекте frontend установить переменную окружения VUE_APP_BASE_SERVER_URL с адресом backend (например: VUE_APP_BASE_SERVER_URL=https://localhost:7028). Внимание: в конце пути слеш не ставить! 
+- Скачать зависимости npm install
 - Собрать(npm run build). Готовый проект будет в папке dist.
