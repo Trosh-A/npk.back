@@ -30,16 +30,14 @@ try
     app.UseSwaggerUI();
   }
 
-  app.UseHttpsRedirection();
-  if (app.Environment.IsDevelopment())
+  app.UseCors(x =>
   {
-    app.UseCors(x =>
-    {
-      x.AllowAnyHeader();
-      x.AllowAnyMethod();
-      x.AllowAnyOrigin();
-    });
-  }
+    x.AllowAnyHeader();
+    x.AllowAnyMethod();
+    x.AllowAnyOrigin();
+  });
+  app.UseDefaultFiles();
+  app.UseStaticFiles();
   app.MapControllers();
 
   app.Run();
